@@ -1,18 +1,42 @@
-@web
+@rest
 Feature: Hand On Labs feature
 
-  Background: Setup PaaS web client
-    Given My app is running in 'www.as.com:80'
-    When I browse to '/'
+#  Scenario: Error non-defined step
+#    Given I run 'echo '"Hola"'
 
-  Scenario: Dummy scenario
-    When '1' elements exists with 'xpath:/html/body/header/div/div[4]/div/div/ul/li[1]/a/img'
-    And I click on the element on index '0'
-    When '1' elements exists with 'xpath:/html/body/div[5]/div/div[2]/div[3]/div[1]/div/article/div[1]/div[1]/hgroup/h2/a'
-    Then a text 'Lesionados y sancionados de la jornada 25 de LaLiga Santander' exists
+#  Scenario: Run step
+#    Given I run 'echo "Hola"' locally
+#    And I run 'echo "Adios"' locally
 
-  Scenario: Assert error scenario
-    When '1' elements exists with 'xpath:/html/body/header/div/div[4]/div/div/ul/li[1]/a/img'
-    And I click on the element on index '0'
-    When '1' elements exists with 'xpath:/html/body/div[5]/div/div[2]/div[3]/div[1]/div/article/div[1]/div[1]/hgroup/h2/a'
-    Then a text 'hola' exists
+#  Scenario Outline: Run step outline
+#    Given I run 'echo <saludo>' locally
+#    Examples:
+#      | saludo  |
+#      | "Hola"  |
+#      | "Adios" |
+
+#  @ignore @manual
+#  Scenario: Ignore
+#    Given I run 'echo "Hola"' locally
+
+#  @runOnEnv(TEST)
+#  Scenario: Run on Env
+#    Given I run 'echo "¡Estoy ejecutando!"' locally
+
+#  @skipOnEnv(TEST)
+#  Scenario: Skip on Env
+#    Given I run 'echo "¡No debería estar ejecutando!"' locally
+
+#  @loop(SALUDOS,SALUDO)
+#  Scenario: Loop
+#    Given I run 'echo <SALUDO>' locally
+
+#  Scenario: Reemplazo entorno
+#    Given I run 'echo ${SALUDO}' locally
+
+#  Scenario: Reemplazo thread
+#    Given I run 'ls -al' locally and save the value in environment variable 'var'
+#    Then I run ' echo !{var}' locally
+
+#  Scenario: Reemplazo arroba
+#    Given I run 'echo @{IP.docker0}' locally
